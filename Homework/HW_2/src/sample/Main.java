@@ -26,7 +26,6 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-
         BorderPane root = new BorderPane();
         root.setPadding(new Insets(10));
 
@@ -36,7 +35,7 @@ public class Main extends Application {
         grid.setVgap(3);
 
         text = new TextField("");
-        text.setMinWidth(180);
+        text.setMinWidth(220);
 
         Button[] btnArray = new Button[25];
         String[] btnText = {"MC", "MR", "M+", "M-", "CE", "7", "8", "9", "÷", "√", "4", "5", "6", "x", "%", "1", "2", "3", "-", "1/x", "0", ".", "+/-", "+", "="};
@@ -55,7 +54,8 @@ public class Main extends Application {
 
         root.setMargin(hbox, new Insets(0, 0, 10, 0));
 
-        Scene scene = new Scene(root, 205, 250);
+        Scene scene = new Scene(root, 240, 265);
+        scene.getStylesheets().add(getClass().getResource("./Calculator.css").toExternalForm());
         primaryStage.setScene(scene);
         primaryStage.show();
     }
